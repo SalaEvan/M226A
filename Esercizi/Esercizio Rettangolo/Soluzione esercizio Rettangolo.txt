@@ -1,0 +1,55 @@
+/**
+* Programma che calcola area e perimetro
+* di un rettangolo
+*
+* @author Michel Palucci
+* @version 01 novembre2023
+*/
+
+public class Program {
+    public static void main(String[] args) {
+        Rettangolo r1 = new Rettangolo();
+        r1.latoMaggiore = 10;
+        r1.latoMinore = 5;
+         System.out.println(r1.dimensioniRettangolo());
+        System.out.println(r1.informazioniRettangolo());
+        r1.disegnaRettangolo();
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+public class Rettangolo{
+    double latoMinore;
+    double latoMaggiore;
+
+    public double calcolaArea(){
+        double area = latoMaggiore * latoMinore;
+        return area;
+    }
+   
+    public double calcolaPerimetro(){
+        double perimetro = latoMaggiore * 2 + latoMinore * 2;
+        return perimetro;
+    }
+   
+    public void disegnaRettangolo(){
+        int dimMinore = (int)latoMinore;
+        int dimMaggiore = (int)latoMaggiore;
+        for(int n = 0; n<dimMaggiore; n++){
+            for(int m = 0; m<dimMinore; m++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+    }
+
+    public String dimensioniRettangolo(){
+        return "Le dimensioni del rettangolo sono " + latoMaggiore + " x " + latoMinore;
+    }
+
+    public String informazioniRettangolo(){
+        return "A = " + calcolaArea() + " P = " + calcolaPerimetro();
+    }
+}
+
