@@ -7,9 +7,9 @@
  * 
  * @version 10.01.2024
  * @author evan.sala
- * 
+ * classe per avviare la musica
  */
-package Audio;
+
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
